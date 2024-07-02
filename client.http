@@ -20,3 +20,10 @@ Content-Type: application/json
   "email": "test@test.com.br",
   "password": "123456"
 }
+
+###
+
+# @name create_question
+POST {{baseUrl}}/questions
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJlMzcyNWI0NC03NTdjLTQ3NTMtYmM0ZS02YTY3NDEwMDFiZDEiLCJpYXQiOjE3MTk5NDg1NzV9.JmjjOeOatAZTNTvvzDyz78sGjI_oAVAAHLG7jMSRYNg
