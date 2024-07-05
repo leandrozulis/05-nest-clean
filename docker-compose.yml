@@ -1,8 +1,8 @@
 version: '2.28.1'
 
-services: 
+services:
   postgres:
-    container_name: nest-clean-pg 
+    container_name: nest-clean
     image: postgres
     ports:
       - 5432:5432
