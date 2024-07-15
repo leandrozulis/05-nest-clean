@@ -13,6 +13,11 @@ import { CryptographyModule } from "../cryptography/cryptography.module";
 @Module({
   imports: [DatabaseModule, CryptographyModule],
   controllers: [CreateAccountController, AuthenticateController, CreateQuestionController,FetchRecentQuestionsController],
-  providers: [CreateQuestionUseCase, FetchRecentQuestionUseCase, RegisterStudentUseCase, AuthenticateStudentUseCase]
+  providers: [
+    CreateQuestionUseCase,
+    FetchRecentQuestionUseCase,
+    RegisterStudentUseCase,
+    AuthenticateStudentUseCase
+  ]
 })
 export class HttpModule {}

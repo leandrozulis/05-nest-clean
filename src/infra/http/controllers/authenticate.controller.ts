@@ -7,6 +7,7 @@ import { PrismaService } from "@/infra/database/prisma/prisma.service";
 import { z } from "zod";
 import { AuthenticateStudentUseCase } from "@/domain/forum/application/use-cases/authenticate-student";
 import { WrongCredentialsError } from "@/domain/forum/application/use-cases/errors/wrong-credentials-error";
+import { Public } from "@/infra/auth/public";
 
 const authenticateBodySchema = z.object({
   email: z.string().email(),
@@ -16,6 +17,7 @@ const authenticateBodySchema = z.object({
 type AuthenticateBodySchema = z.infer<typeof authenticateBodySchema>
 
 @Controller('/sessions')
+@Public()
 export class AuthenticateController {
 
   constructor(
