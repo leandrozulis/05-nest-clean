@@ -1,11 +1,9 @@
-import { WatchedList } from "./watched-list";
+import { WatchedList } from '@/core/entities/watched-list'
 
 class NumberWatchedList extends WatchedList<number> {
-
   compareItems(a: number, b: number): boolean {
     return a === b
   }
-
 }
 
 describe('watched list', () => {
@@ -40,6 +38,7 @@ describe('watched list', () => {
     list.add(2)
 
     expect(list.currentItems).toHaveLength(3)
+
     expect(list.getRemovedItems()).toEqual([])
     expect(list.getNewItems()).toEqual([])
   })
@@ -51,6 +50,7 @@ describe('watched list', () => {
     list.remove(4)
 
     expect(list.currentItems).toHaveLength(3)
+
     expect(list.getRemovedItems()).toEqual([])
     expect(list.getNewItems()).toEqual([])
   })

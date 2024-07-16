@@ -27,12 +27,13 @@ export abstract class WatchedList<T> {
 
   private isCurrentItem(item: T): boolean {
     return (
-      this.currentItems.filter((v: T) => this.compareItems(item, v)).length !== 0
+      this.currentItems.filter((v: T) => this.compareItems(item, v)).length !==
+      0
     )
   }
 
   private isNewItem(item: T): boolean {
-    return this.new.filter((v: T) => this.compareItems(item, v)).length !== 0 
+    return this.new.filter((v: T) => this.compareItems(item, v)).length !== 0
   }
 
   private isRemovedItem(item: T): boolean {
